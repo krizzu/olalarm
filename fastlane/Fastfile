@@ -31,7 +31,7 @@ platform :ios do
             output_directory: root_dir,
             xcargs: {
                 :APP_BUILD_NUMBER => "#{version["build_number"].to_i}",
-                :APP_VERSION => version["version"],
+                :APP_VERSION_NUMBER => version["version"],
                 :CODE_SIGNING_IDENTITY => ENV["CODE_SIGNING_IDENTITY"],
                 :PROVISIONING_PROFILE_APP => ENV["PROVISIONING_PROFILE_SPECIFIER_APP"],
                 :PROVISIONING_PROFILE_WIDGET => ENV["PROVISIONING_PROFILE_SPECIFIER_WIDGET"]
