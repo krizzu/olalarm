@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E22846822EBDF74B000ADF19 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = E22846812EBDF74B000ADF19 /* Logging */; };
+		E22846842EBDFE56000ADF19 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = E22846832EBDFE56000ADF19 /* Logging */; };
+		E25888702EC489A9004EDD7B /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = E258886F2EC489A9004EDD7B /* AlertToast */; };
+		E260D7392EBC95300054D3A8 /* SharedData in Frameworks */ = {isa = PBXBuildFile; productRef = E260D7382EBC95300054D3A8 /* SharedData */; };
+		E28BDB6D2ECE057900294CCE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E28BDB6C2ECE057900294CCE /* README.md */; };
+		E28BDB742ECE4BB300294CCE /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = E28BDB732ECE4BB300294CCE /* Gemfile */; };
+		E28BDB7A2ECE4C8A00294CCE /* app_version.json in Resources */ = {isa = PBXBuildFile; fileRef = E28BDB792ECE4C8200294CCE /* app_version.json */; };
+		E28BDB7C2ECE4D1300294CCE /* .env.example in Resources */ = {isa = PBXBuildFile; fileRef = E28BDB7B2ECE4D1300294CCE /* .env.example */; };
+		E2AD09E82EBD465B00E36C65 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = E2AD09E72EBD465B00E36C65 /* SQLiteData */; };
+		E2AD09EA2EBD475900E36C65 /* SharedData in Frameworks */ = {isa = PBXBuildFile; productRef = E2AD09E92EBD475900E36C65 /* SharedData */; };
+		E2B989A42EBB587B001823E9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF4BAC2EAC377000C7F7A5 /* WidgetKit.framework */; };
+		E2B989A52EBB587B001823E9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF4BAE2EAC377000C7F7A5 /* SwiftUI.framework */; };
+		E2B989B22EBB587C001823E9 /* olalarm-activity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E2B989A32EBB587B001823E9 /* olalarm-activity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E2BF5AEC2EB950FB0013AAB8 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = E2BF5AEB2EB950FB0013AAB8 /* SQLiteData */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2B989B02EBB587C001823E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E287E1282EAA201E00D3E3ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2B989A22EBB587B001823E9;
+			remoteInfo = OlalarmActivityExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2AF4BBF2EAC377200C7F7A5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2B989B22EBB587C001823E9 /* olalarm-activity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E287E1302EAA201E00D3E3ED /* Olalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28BDB6C2ECE057900294CCE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E28BDB732ECE4BB300294CCE /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		E28BDB792ECE4C8200294CCE /* app_version.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = app_version.json; sourceTree = "<group>"; };
+		E28BDB7B2ECE4D1300294CCE /* .env.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.example; sourceTree = "<group>"; };
+		E2AF4BAC2EAC377000C7F7A5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E2AF4BAE2EAC377000C7F7A5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E2B989A32EBB587B001823E9 /* olalarm-activity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "olalarm-activity.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E23A6D572EC7DF11000873EB /* Exceptions for "Shared" folder in "olalarm" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SharedData,
+			);
+			target = E287E12F2EAA201E00D3E3ED /* olalarm */;
+		};
+		E23A6D582EC7DF11000873EB /* Exceptions for "Shared" folder in "olalarm-activity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				"Sounds/deep-in-time-master-track.mp3",
+				"Sounds/gentle-acoustic-guitar.mp3",
+				"Sounds/tick-tock.mp3",
+				"Sounds/wake-up-to-the-renaissance.mp3",
+				"Sounds/whimsical-wonderland.mp3",
+			);
+			target = E2B989A22EBB587B001823E9 /* olalarm-activity */;
+		};
+		E2AF4B972EAC052A00C7F7A5 /* Exceptions for "OlalarmApp" folder in "olalarm" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E287E12F2EAA201E00D3E3ED /* olalarm */;
+		};
+		E2B989B62EBB587C001823E9 /* Exceptions for "OlalarmActivity" folder in "olalarm-activity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E2B989A22EBB587B001823E9 /* olalarm-activity */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E23A6D542EC7DF11000873EB /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E23A6D572EC7DF11000873EB /* Exceptions for "Shared" folder in "olalarm" target */,
+				E23A6D582EC7DF11000873EB /* Exceptions for "Shared" folder in "olalarm-activity" target */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E287E1322EAA201E00D3E3ED /* OlalarmApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E2AF4B972EAC052A00C7F7A5 /* Exceptions for "OlalarmApp" folder in "olalarm" target */,
+			);
+			path = OlalarmApp;
+			sourceTree = "<group>";
+		};
+		E28BDB762ECE4C1100294CCE /* fastlane */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fastlane;
+			sourceTree = "<group>";
+		};
+		E2B989A62EBB587B001823E9 /* OlalarmActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E2B989B62EBB587C001823E9 /* Exceptions for "OlalarmActivity" folder in "olalarm-activity" target */,
+			);
+			path = OlalarmActivity;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E287E12D2EAA201E00D3E3ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E22846822EBDF74B000ADF19 /* Logging in Frameworks */,
+				E25888702EC489A9004EDD7B /* AlertToast in Frameworks */,
+				E2BF5AEC2EB950FB0013AAB8 /* SQLiteData in Frameworks */,
+				E260D7392EBC95300054D3A8 /* SharedData in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B989A02EBB587B001823E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2AD09E82EBD465B00E36C65 /* SQLiteData in Frameworks */,
+				E2B989A52EBB587B001823E9 /* SwiftUI.framework in Frameworks */,
+				E2B989A42EBB587B001823E9 /* WidgetKit.framework in Frameworks */,
+				E2AD09EA2EBD475900E36C65 /* SharedData in Frameworks */,
+				E22846842EBDFE56000ADF19 /* Logging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E287E1272EAA201E00D3E3ED = {
+			isa = PBXGroup;
+			children = (
+				E28BDB7B2ECE4D1300294CCE /* .env.example */,
+				E28BDB792ECE4C8200294CCE /* app_version.json */,
+				E28BDB762ECE4C1100294CCE /* fastlane */,
+				E28BDB732ECE4BB300294CCE /* Gemfile */,
+				E28BDB6C2ECE057900294CCE /* README.md */,
+				E287E1322EAA201E00D3E3ED /* OlalarmApp */,
+				E2B989A62EBB587B001823E9 /* OlalarmActivity */,
+				E2AF4BAB2EAC377000C7F7A5 /* Frameworks */,
+				E287E1312EAA201E00D3E3ED /* Products */,
+				E23A6D542EC7DF11000873EB /* Shared */,
+			);
+			sourceTree = "<group>";
+		};
+		E287E1312EAA201E00D3E3ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E287E1302EAA201E00D3E3ED /* Olalarm.app */,
+				E2B989A32EBB587B001823E9 /* olalarm-activity.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2AF4BAB2EAC377000C7F7A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2AF4BAC2EAC377000C7F7A5 /* WidgetKit.framework */,
+				E2AF4BAE2EAC377000C7F7A5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E287E12F2EAA201E00D3E3ED /* olalarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E287E13B2EAA201F00D3E3ED /* Build configuration list for PBXNativeTarget "olalarm" */;
+			buildPhases = (
+				E287E12C2EAA201E00D3E3ED /* Sources */,
+				E287E12D2EAA201E00D3E3ED /* Frameworks */,
+				E287E12E2EAA201E00D3E3ED /* Resources */,
+				E2AF4BBF2EAC377200C7F7A5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2B989B12EBB587C001823E9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E23A6D542EC7DF11000873EB /* Shared */,
+				E287E1322EAA201E00D3E3ED /* OlalarmApp */,
+				E28BDB762ECE4C1100294CCE /* fastlane */,
+			);
+			name = olalarm;
+			packageProductDependencies = (
+				E2BF5AEB2EB950FB0013AAB8 /* SQLiteData */,
+				E260D7382EBC95300054D3A8 /* SharedData */,
+				E22846812EBDF74B000ADF19 /* Logging */,
+				E258886F2EC489A9004EDD7B /* AlertToast */,
+			);
+			productName = Olalarm;
+			productReference = E287E1302EAA201E00D3E3ED /* Olalarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2B989A22EBB587B001823E9 /* olalarm-activity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B989B32EBB587C001823E9 /* Build configuration list for PBXNativeTarget "olalarm-activity" */;
+			buildPhases = (
+				E2B9899F2EBB587B001823E9 /* Sources */,
+				E2B989A02EBB587B001823E9 /* Frameworks */,
+				E2B989A12EBB587B001823E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E2B989A62EBB587B001823E9 /* OlalarmActivity */,
+			);
+			name = "olalarm-activity";
+			packageProductDependencies = (
+				E2AD09E72EBD465B00E36C65 /* SQLiteData */,
+				E2AD09E92EBD475900E36C65 /* SharedData */,
+				E22846832EBDFE56000ADF19 /* Logging */,
+			);
+			productName = OlalarmActivityExtension;
+			productReference = E2B989A32EBB587B001823E9 /* olalarm-activity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E287E1282EAA201E00D3E3ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					E287E12F2EAA201E00D3E3ED = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					E2B989A22EBB587B001823E9 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E287E12B2EAA201E00D3E3ED /* Build configuration list for PBXProject "Olalarm" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E287E1272EAA201E00D3E3ED;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E2BF5AEA2EB950FB0013AAB8 /* XCRemoteSwiftPackageReference "sqlite-data" */,
+				E22846802EBDF74B000ADF19 /* XCRemoteSwiftPackageReference "swift-log" */,
+				E258886E2EC489A9004EDD7B /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E287E1312EAA201E00D3E3ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E287E12F2EAA201E00D3E3ED /* olalarm */,
+				E2B989A22EBB587B001823E9 /* olalarm-activity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E287E12E2EAA201E00D3E3ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28BDB7C2ECE4D1300294CCE /* .env.example in Resources */,
+				E28BDB742ECE4BB300294CCE /* Gemfile in Resources */,
+				E28BDB7A2ECE4C8A00294CCE /* app_version.json in Resources */,
+				E28BDB6D2ECE057900294CCE /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B989A12EBB587B001823E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E287E12C2EAA201E00D3E3ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B9899F2EBB587B001823E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2B989B12EBB587C001823E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2B989A22EBB587B001823E9 /* olalarm-activity */;
+			targetProxy = E2B989B02EBB587C001823E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E287E1392EAA201F00D3E3ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_BUILD_NUMBER = 1;
+				APP_VERSION_NUMBER = 0.0.1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_IDENTITY = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4S68X9X737;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E287E13A2EAA201F00D3E3ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_BUILD_NUMBER = 1;
+				APP_VERSION_NUMBER = 0.0.1;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_IDENTITY = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4S68X9X737;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E287E13C2EAA201F00D3E3ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_VERSION_NUMBER = 0.0.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGNING_IDENTITY)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "$(APP_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlalarmApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Olalarm;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION_NUMBER)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kborowy.olalarm;
+				PRODUCT_NAME = Olalarm;
+				PROVISIONING_PROFILE_APP = "";
+				PROVISIONING_PROFILE_SPECIFIER = "$(inherited)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E287E13D2EAA201F00D3E3ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_VERSION_NUMBER = 0.0.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGNING_IDENTITY)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = "$(APP_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlalarmApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Olalarm;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION_NUMBER)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kborowy.olalarm;
+				PRODUCT_NAME = Olalarm;
+				PROVISIONING_PROFILE_APP = "";
+				PROVISIONING_PROFILE_SPECIFIER = "$(PROVISIONING_PROFILE_APP)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E2B989B42EBB587C001823E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGNING_IDENTITY)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "$(APP_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlalarmActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OlalarmActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION_NUMBER)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kborowy.olalarm.activity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(inherited)";
+				PROVISIONING_PROFILE_WIDGET = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E2B989B52EBB587C001823E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGNING_IDENTITY)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = "$(APP_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlalarmActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OlalarmActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = "$(APP_VERSION_NUMBER)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kborowy.olalarm.activity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(PROVISIONING_PROFILE_WIDGET)";
+				PROVISIONING_PROFILE_WIDGET = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E287E12B2EAA201E00D3E3ED /* Build configuration list for PBXProject "Olalarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287E1392EAA201F00D3E3ED /* Debug */,
+				E287E13A2EAA201F00D3E3ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E287E13B2EAA201F00D3E3ED /* Build configuration list for PBXNativeTarget "olalarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E287E13C2EAA201F00D3E3ED /* Debug */,
+				E287E13D2EAA201F00D3E3ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B989B32EBB587C001823E9 /* Build configuration list for PBXNativeTarget "olalarm-activity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B989B42EBB587C001823E9 /* Debug */,
+				E2B989B52EBB587C001823E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E22846802EBDF74B000ADF19 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.4;
+			};
+		};
+		E258886E2EC489A9004EDD7B /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+		E2BF5AEA2EB950FB0013AAB8 /* XCRemoteSwiftPackageReference "sqlite-data" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/sqlite-data";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E22846812EBDF74B000ADF19 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E22846802EBDF74B000ADF19 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		E22846832EBDFE56000ADF19 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E22846802EBDF74B000ADF19 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		E258886F2EC489A9004EDD7B /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E258886E2EC489A9004EDD7B /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		E260D7382EBC95300054D3A8 /* SharedData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedData;
+		};
+		E2AD09E72EBD465B00E36C65 /* SQLiteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BF5AEA2EB950FB0013AAB8 /* XCRemoteSwiftPackageReference "sqlite-data" */;
+			productName = SQLiteData;
+		};
+		E2AD09E92EBD475900E36C65 /* SharedData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedData;
+		};
+		E2BF5AEB2EB950FB0013AAB8 /* SQLiteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BF5AEA2EB950FB0013AAB8 /* XCRemoteSwiftPackageReference "sqlite-data" */;
+			productName = SQLiteData;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E287E1282EAA201E00D3E3ED /* Project object */;
+}

@@ -1,0 +1,47 @@
+fastlane_require 'fileutils'
+fastlane_version '2.228.0'
+fastlane_require 'dotenv'
+
+root_dir = File.expand_path('..', root_dir)
+
+# load env file info
+env_file = File.expand_path('.env', root_dir)
+if(!File.exist?(env_file))
+    UI.user_error!('file `.env` is missing in root')
+end
+Dotenv.overload env_file
+
+skip_docs # do not generate README.md in fastlane directory
+
+private_lane :read_app_version do
+    load_json(json_path: File.expand_path('app_version.json', root_dir))
+end
+
+platform :ios do
+    lane :build_release do
+        xcode_project_path = File.expand_path('Olalarm.xcodeproj', root_dir)
+        version = read_app_version()
+
+        binary_path = gym(
+            project: xcode_project_path,
+            scheme: 'OlalarmApp',
+            export_method: 'app-store',
+            export_team_id: ENV["DEVELOPMENT_TEAM"],
+            output_name: "olalarm-#{version["version"]}",
+            output_directory: root_dir,
+            xcargs: {
+                :APP_BUILD_NUMBER => "#{version["build_number"].to_i}",
+                :APP_VERSION => version["version"],
+                :CODE_SIGNING_IDENTITY => ENV["CODE_SIGNING_IDENTITY"],
+                :PROVISIONING_PROFILE_APP => ENV["PROVISIONING_PROFILE_SPECIFIER_APP"],
+                :PROVISIONING_PROFILE_WIDGET => ENV["PROVISIONING_PROFILE_SPECIFIER_WIDGET"]
+            },
+            export_options: {
+                provisioningProfiles: {
+                    "com.kborowy.olalarm" => ENV["PROVISIONING_PROFILE_SPECIFIER_APP"],
+                    "com.kborowy.olalarm.activity" => ENV["PROVISIONING_PROFILE_SPECIFIER_WIDGET"]
+                }
+            }
+        )
+    end
+end
