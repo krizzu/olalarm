@@ -9,6 +9,7 @@ struct SettingsScreen: View {
     @AppStorage(AppSettings.KeyTheme) var theme: AppSettings.Theme = .system
     @AppStorage(AppSettings.KeyGridSize) var gridSize: Int = 1
     @AppStorage(AppSettings.KeyBadge) var badgeEnabled: Bool = false
+    @AppStorage(AppSettings.WarnDisabledAlarm) var warmDisabledAlarm: Bool = false
     @State var permissionMissingAlert: Bool = false
 
     var body: some View {
@@ -47,6 +48,20 @@ struct SettingsScreen: View {
                             VStack {
                                 Text("Adds a badge to app icon indicating number of active alarms")
                                     .font(.caption2)
+                                    .foregroundStyle(
+                                        .colorTextPrimary.opacity(0.75)
+                                    )
+                            }.frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        
+                        VStack(spacing: 8) {
+                            HStack {
+                                Text("Confirm disabled alarm").lineLimit(1).layoutPriority(1)
+                                Spacer()
+                                Toggle("", isOn: $warmDisabledAlarm).tint(.colorPrimary)
+                            }
+                            VStack {
+                                Text("Prompts for confirmation when saving an alarm that is disabled").font(.caption2)
                                     .foregroundStyle(
                                         .colorTextPrimary.opacity(0.75)
                                     )

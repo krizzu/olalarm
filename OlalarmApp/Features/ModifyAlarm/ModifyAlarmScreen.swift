@@ -8,6 +8,7 @@ struct ModifyAlarmScreen: View {
     @Environment(Router.self) private var router
     @Environment(AlarmToastViewModel.self) private var toast
     @State private var vm: ModifyAlarmViewModel = .init()
+    @AppStorage(AppSettings.WarnDisabledAlarm) var warmDisabledAlarm: Bool = false
 
     @State private var actionError: OlalarmError? = nil
 
@@ -17,28 +18,44 @@ struct ModifyAlarmScreen: View {
 
     @State private var snoozeMinutes: Int? = 3
     @State private var sound: OlalarmSound? = nil
+    @State private var exitAlert = false
 
     init(alarmId: UUID? = nil) {
         self.alarmId = alarmId
     }
 
-    func onSave() {
-        Task {
-            let result = if let alarmId {
-                await vm.save(id: alarmId, name: name, timeTrigger: time, enabled: isEnabled, snooze: snoozeMinutes, soundId: sound?.id)
-            } else {
-                await vm.create(name: name, timeTrigger: time, enabled: isEnabled, snooze: snoozeMinutes, soundId: sound?.id)
-            }
+    func saveAndExit(_ id: UUID?, _ name: String, _ time: Date, _ enabled: Bool, _ snooze: Int?, _ sound: OlalarmSound?) async {
+        let result = if let alarmId = id {
+            await vm.save(id: alarmId, name: name, timeTrigger: time, enabled: enabled, snooze: snooze, soundId: sound?.id)
+        } else {
+            await vm.create(name: name, timeTrigger: time, enabled: enabled, snooze: snooze, soundId: sound?.id)
+        }
 
-            switch result {
-            case let .failure(error):
-                actionError = error
-            case let .success(saved):
-                if saved.enabled {
-                    toast.trigger(date: saved.trigger.relativeDate())
-                }
-                router.resetToHome()
+        switch result {
+        case let .failure(error):
+            actionError = error
+        case let .success(saved):
+            if saved.enabled {
+                toast.trigger(date: saved.trigger.relativeDate())
             }
+            router.resetToHome()
+        }
+    }
+
+    // asks user if alarm should be enabled before exit
+    func onSaveAndExit() {
+        if !isEnabled && warmDisabledAlarm {
+            exitAlert = true
+            return
+        }
+
+        onSetEnableAndExit(alarmEnabled: isEnabled)
+    }
+
+    func onSetEnableAndExit(alarmEnabled: Bool) {
+        isEnabled = alarmEnabled
+        Task {
+            await saveAndExit(alarmId, name, time, alarmEnabled, snoozeMinutes, sound)
         }
     }
 
@@ -65,8 +82,20 @@ struct ModifyAlarmScreen: View {
 
                 }.scrollContentBackground(.hidden)
 
-                ButtonDefault(text: "save", colorText: .white, colorBackground: .colorAccent, maxWidth: .infinity, action: onSave).padding(.horizontal)
+                ButtonDefault(text: "save", colorText: .white, colorBackground: .colorAccent, maxWidth: .infinity, action: onSaveAndExit).padding(.horizontal)
             }
+        }
+        .alert("Enable alarm?", isPresented: $exitAlert) {
+            Button("Enable", role: .confirm) {
+                onSetEnableAndExit(alarmEnabled: true)
+                exitAlert = false
+            }
+            Button("No", role: .close) {
+                onSetEnableAndExit(alarmEnabled: isEnabled)
+                exitAlert = false
+            }
+        } message: {
+            Text("You are about to save disabled alarm. Do you want to enable it now?")
         }
         .navigationTitle(Text(alarmId == nil ? "Create alarm" : "Modify alarm"))
         .task {
