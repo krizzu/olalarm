@@ -9,7 +9,7 @@ struct SettingsScreen: View {
     @AppStorage(AppSettings.KeyTheme) var theme: AppSettings.Theme = .system
     @AppStorage(AppSettings.KeyGridSize) var gridSize: Int = 1
     @AppStorage(AppSettings.KeyBadge) var badgeEnabled: Bool = false
-    @AppStorage(AppSettings.WarnDisabledAlarm) var warmDisabledAlarm: Bool = false
+    @AppStorage(AppSettings.SetEnableOnSave) var setEnableOnSave: Bool = false
     @State var permissionMissingAlert: Bool = false
 
     var body: some View {
@@ -56,12 +56,12 @@ struct SettingsScreen: View {
                         
                         VStack(spacing: 8) {
                             HStack {
-                                Text("Confirm disabled alarm").lineLimit(1).layoutPriority(1)
+                                Text("Always enable on save").lineLimit(1).layoutPriority(1)
                                 Spacer()
-                                Toggle("", isOn: $warmDisabledAlarm).tint(.colorPrimary)
+                                Toggle("", isOn: $setEnableOnSave).tint(.colorPrimary)
                             }
                             VStack {
-                                Text("Prompts for confirmation when saving an alarm that is disabled").font(.caption2)
+                                Text("Automatically turns the alarm on whenever you save changes").font(.caption2)
                                     .foregroundStyle(
                                         .colorTextPrimary.opacity(0.75)
                                     )

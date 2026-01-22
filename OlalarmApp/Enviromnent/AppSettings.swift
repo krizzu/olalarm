@@ -4,7 +4,7 @@ struct AppSettings {
     static let KeyTheme: String = "app_theme"
     static let KeyGridSize: String = "app_grid_size"
     static let KeyBadge: String = "app_badge"
-    static let WarnDisabledAlarm: String = "app_ask_before_save"
+    static let SetEnableOnSave: String = "app_set_enable_on_save"
 
     enum Theme: String, CaseIterable, Hashable {
         case light, dark, system
