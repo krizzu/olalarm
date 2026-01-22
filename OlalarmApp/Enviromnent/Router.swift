@@ -5,6 +5,10 @@ import SwiftUI
 @MainActor
 class Router {
     var path = NavigationPath()
+    
+    func back() {
+        path.removeLast()
+    }
 
     func resetToHome() {
         path = NavigationPath()
